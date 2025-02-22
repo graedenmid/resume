@@ -40,7 +40,7 @@
         text-align: center;
         position: relative;
         overflow: hidden;
-        height: 400px; /* Set a fixed height for the header */
+        height: 300px; /* Reduced from 400px */
       }
 
       .video-bg {
@@ -59,22 +59,24 @@
 
       .header-content {
         position: relative;
-        z-index: 3; /* Increased to be above video */
+        z-index: 3;
+        padding: 2rem 0; /* Added specific padding for content */
       }
 
       .header-content h1 {
         font-size: 3.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem; /* Reduced from 1rem */
       }
 
       .header-content h3 {
         font-size: 1.75rem;
         color: var(--light);
+        margin-bottom: 0.5rem; /* Added margin */
       }
 
       .header-content p {
         font-size: 1.1rem;
-        padding: 1rem;
+        padding: 0.5rem; /* Reduced from 1rem */
         color: white;
       }
 
