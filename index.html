@@ -40,11 +40,26 @@
         text-align: center;
         position: relative;
         overflow: hidden;
+        height: 400px; /* Set a fixed height for the header */
+      }
+
+      .video-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 105%; /* Slightly larger than container to allow movement */
+        min-height: 105%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        opacity: 0.3; /* Make video subtle */
+        object-fit: cover;
       }
 
       .header-content {
         position: relative;
-        z-index: 2;
+        z-index: 3; /* Increased to be above video */
       }
 
       .header-content h1 {
@@ -61,24 +76,6 @@
         font-size: 1.1rem;
         padding: 1rem;
         color: white;
-      }
-
-
-      .parallax-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.5;
-        z-index: 1;
-        background: repeating-linear-gradient(
-          45deg,
-          var(--accent),
-          var(--accent) 10px,
-          transparent 10px,
-          transparent 20px
-        );
       }
 
       /* Navigation */
@@ -222,13 +219,15 @@
 
   <body>
     <header>
-      <div class="parallax-bg"></div>
+      <video class="video-bg" autoplay muted loop playsinline>
+        <source src="data-connected-video.mp4" type="video/mp4" />
+      </video>
       <div class="header-content">
         <h1>Graeden Middel</h1>
-        <h3>Strategy and Operations</p>
-          <p>
-            graedenmiddel@gmail.com | 289-926-8883 | linkedin.com/in/graedenmiddel
-            </p>          
+        <h3>Strategy and Operations</h3>
+        <p>
+          graedenmiddel@gmail.com | 289-926-8883 | linkedin.com/in/graedenmiddel
+        </p>
       </div>
     </header>
 
@@ -528,17 +527,16 @@
       </div>
     </section>
 
-    <!-- NEED TO ADD AN IMAGE OR SOMETHING FOR PARALLAX - UNKNOWN HOW WORKS -->
     <script>
-      // Enhanced parallax effect
+      // Enhanced parallax effect for video
       document.addEventListener("mousemove", (e) => {
-        const parallaxBg = document.querySelector(".parallax-bg");
+        const video = document.querySelector(".video-bg");
         const mouseX = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
         const mouseY = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
 
-        parallaxBg.style.transform = `translate(${mouseX * 50}px, ${
-          mouseY * 50
-        }px)`; // Increased from 20px to 50px
+        video.style.transform = `translate(${-50 + mouseX * 2}%, ${
+          -50 + mouseY * 2
+        }%)`;
       });
 
       // Fix scroll offset for navigation
