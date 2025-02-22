@@ -29,14 +29,14 @@
         background-color: var(--background);
         width: 100%;
         min-height: 100vh;
-        font-size: 48px;
+        font-size: 16px;
       }
 
       /* Header Styles */
       header {
         background: var(--primary);
         color: white;
-        padding: 4rem 8%;
+        padding: 1rem 8%;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -48,17 +48,17 @@
       }
 
       .header-content h1 {
-        font-size: 16rem;
+        font-size: 4rem;
         margin-bottom: 1rem;
       }
 
       .header-content h3 {
-        font-size: 6rem;
+        font-size: 2rem;
         color: var(--light);
       }
 
       .header-content p {
-        font-size: 4rem;
+        font-size: 1.25rem;
         padding: 1rem;
         color: white;
       }
@@ -84,18 +84,18 @@
       /* Navigation */
       nav {
         background: var(--secondary);
-        padding: 3rem;
+        padding: 1rem;
         position: sticky;
         top: 0;
         z-index: 100;
-        font-size: 4rem;
+        font-size: 1.125rem;
       }
 
       nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
-        gap: 8rem;
+        gap: 4rem;
         padding: 0 6%;
         max-width: none;
       }
@@ -114,15 +114,15 @@
 
       /* Section Styles */
       section {
-        padding: 5rem 8%;
+        padding: 4rem 8%;
         max-width: none;
         width: 100%;
         margin: 0;
       }
 
       .section-title {
-        font-size: 8rem;
-        margin-bottom: 6rem;
+        font-size: 3rem;
+        margin-bottom: 3rem;
         color: var(--primary);
         position: relative;
       }
@@ -145,12 +145,12 @@
       /* Card Styles */
       .card {
         background: white;
-        padding: 8rem;
+        padding: 3rem;
         border-radius: 20px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         transition: all 0.1s cubic-bezier(0.1, 0.7, 0.2, 1);
-        font-size: 4rem;
+        font-size: 1.125rem;
         max-width: 100%;
         margin: 0.1 auto;
       }
@@ -161,24 +161,24 @@
       }
 
       .card h3 {
-        font-size: 6rem;
-        margin-bottom: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
       }
 
       /* Grid Section */
       .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
+        gap: 1.5rem;
       }
 
       .grid-item {
         background: var(--primary);
-        padding: 4rem;
+        padding: 2rem;
         border-radius: 15px;
         text-align: center;
         transition: all 0.1s ease;
-        font-size: 6rem;
+        font-size: 1.5rem;
         color: white;
       }
 
@@ -197,7 +197,7 @@
         nav ul {
           flex-direction: column;
           text-align: center;
-          gap: 3rem;
+          gap: 0.3rem;
         }
 
         .section-title {
@@ -205,8 +205,17 @@
         }
 
         section {
-          padding: 2rem 1rem;
+          padding: 0.6rem 0.3rem;
         }
+      }
+
+      /* List styles */
+      ul {
+        padding-left: 2rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
       }
     </style>
   </head>
