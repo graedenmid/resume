@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Resume</title>
+    <style>
+      /* Color Variables */
+      :root {
+        --primary: #2c3e50;
+        --secondary: #34495e;
+        --accent: #3498db;
+        --light: #ecf0f1;
+        --text: #2c3e50;
+        --background: #f9f9f9;
+      }
+
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: var(--background);
+        width: 100%;
+        min-height: 100vh;
+        font-size: 48px;
+      }
+
+      /* Header Styles */
+      header {
+        background: var(--primary);
+        color: white;
+        padding: 4rem 8%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .header-content h1 {
+        font-size: 16rem;
+        margin-bottom: 1rem;
+      }
+
+      .header-content h3 {
+        font-size: 6rem;
+        color: var(--light);
+      }
+
+      .header-content p {
+        font-size: 4rem;
+        padding: 1rem;
+        color: white;
+      }
+
+
+      .parallax-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        z-index: 1;
+        background: repeating-linear-gradient(
+          45deg,
+          var(--accent),
+          var(--accent) 10px,
+          transparent 10px,
+          transparent 20px
+        );
+      }
+
+      /* Navigation */
+      nav {
+        background: var(--secondary);
+        padding: 3rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        font-size: 4rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 8rem;
+        padding: 0 6%;
+        max-width: none;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+        text-shadow: 0 0 1px var(--accent);
+        transform: scale(1.05);
+      }
+
+      /* Section Styles */
+      section {
+        padding: 5rem 8%;
+        max-width: none;
+        width: 100%;
+        margin: 0;
+      }
+
+      .section-title {
+        font-size: 8rem;
+        margin-bottom: 6rem;
+        color: var(--primary);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--accent);
+        transition: width 0.25s ease;
+      }
+
+      .section-title:hover::after {
+        width: 250px;
+      }
+
+      /* Card Styles */
+      .card {
+        background: white;
+        padding: 8rem;
+        border-radius: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 4rem;
+        transition: all 0.1s cubic-bezier(0.1, 0.7, 0.2, 1);
+        font-size: 4rem;
+        max-width: 100%;
+        margin: 0.1 auto;
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.01);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .card h3 {
+        font-size: 6rem;
+        margin-bottom: 2.5rem;
+      }
+
+      /* Grid Section */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+      }
+
+      .grid-item {
+        background: var(--primary);
+        padding: 4rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.1s ease;
+        font-size: 6rem;
+        color: white;
+      }
+
+      .grid-item a {
+        color: white;
+      }
+
+      .grid-item:hover {
+        background: var(--secondary);
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          text-align: center;
+          gap: 3rem;
+        }
+
+        .section-title {
+          font-size: 6rem;
+        }
+
+        section {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="parallax-bg"></div>
+      <div class="header-content">
+        <h1>Graeden Middel</h1>
+        <h3>Strategy and Operations</p>
+          <p>
+            graedenmiddel@gmail.com | 289-926-8883 | linkedin.com/in/graedenmiddel
+          </p>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <div class="card">
+        <p>
+          As the Sales Operations Analyst at Calian Group, I am spearheading a
+          company-wide CRM optimization project that significantly boosted sales
+          pipeline activity and managed sales commissions across various
+          business units, directly contributing to the long-term organic growth
+          goals. I utilize tools like HubSpot, Excel, and SAP to support ad-hoc
+          projects, such as gross margin analysis and revenue forecasting.
+        </p>
+        <br />
+        <p>
+          As an Operations Analyst at Forma.ai, I managed monthly sales data
+          worth over $40M. I collaborated with cross-functional teams to
+          implement new platform features, developed models and performed
+          analyses to drive business decisions, and identified and led process
+          improvement projects.
+        </p>
+        <br />
+        <p>
+          I have a Bachelor of Science in Microbiology and Immunology from
+          Western University, where I honed my scientific and analytical skills.
+          My career spans business strategy and operations, incentive
+          compensation, research, and political campaign management,
+          strengthening my skills in data analysis, Excel, SQL, critical
+          thinking, and problem-solving. I have overseen millions of dollars in
+          incentive compensation, synthesized complex news into actionable
+          insights, and led a team to a data-backed election victory.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="card">
+        <h3>Sales Operations Analyst</h3>
+        <p>
+          <a href="https://www.calian.com/" target="_blank">Calian Group</a> |
+          Jan 2024 - Present
+        </p>
+        <br />
+        <p>
+          Helped initiate and manage a company-wide CRM optimization project
+          that significantly boosted sales pipeline activity and managed sales
+          commissions across various business units, directly contributing to
+          the long-term organic growth goals. Utilized tools like HubSpot,
+          Excel, PowerBI and SAP to support ad-hoc projects, such as gross
+          margin analysis and revenue forecasting.
+        </p>
+        <br />
+        <ul>
+          <li>
+            Hired as the primary Sales Operations Analyst to support the
+            company's shift towards expanding organic growth.
+          </li>
+          <li>
+            Process and manage sales commissions across various business units,
+            ensuring accuracy and timely distribution.
+          </li>
+          <li>
+            Assist with initiation and management of a company-wide project to
+            standardize the use of HubSpot, resulting in:
+          </li>
+          <ul>
+            <li>
+              Increased deal value in the investigation stage by 136% and in the
+              high probability stage by 30x within the first three months for
+              one business unit.
+            </li>
+            <li>
+              Reduced expired closed dates from 95% to 12% within one month for
+              another business unit.
+            </li>
+            <li>
+              Significant overall increase in qualified sales activity filling
+              the pipeline and 100% participation rate across phased-in teams.
+            </li>
+          </ul>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Operations Analyst</h3>
+        <p>
+          <a href="https://www.forma.ai/" target="_blank">Forma.ai</a> | Jul
+          2023 - Jul 2024
+        </p>
+        <br />
+        <p>
+          I handled $40M+ in monthly sales data to optimize customer experience
+          and business growth, collaborating on process improvements and
+          platform feature delivery as a trusted point of contact with
+          leadership teams.
+        </p>
+        <br />
+        <ul>
+          <li>
+            Oversaw ongoing sales incentive compensation operations, regularly
+            managing $4M+ in monthly incentive compensation for the client,
+            including rule building, process execution, and reporting.
+          </li>
+          <li>
+            Collaborated with cross-functional teams to implement new platform
+            features and rewards solutions to support continuous improvement and
+            automation.
+          </li>
+          <li>
+            Built models and reports, including payroll, quota, accruals, and
+            actuals, using the in-house software aided with Excel charts, pivot
+            tables, and complex formulas, including INDEX-MATCH, XLOOKUP, and
+            nested IFs, ORs, and ANDs.
+          </li>
+          <li>
+            Performed frequent analyses to drive business growth, optimize
+            customer experience, solve compensation and attainment discrepancies
+            through Excel pivot tables and formulas, and optimize SQL queries.
+          </li>
+          <li>
+            Identified internal process improvement opportunities and led
+            projects to accomplish the changing goals and needs of the client
+            through regular partnerships with senior members of the compensation
+            and sales teams.
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Research Analyst (Contract)</h3>
+        <p>
+          <a href="https://www.delphicresearch.ca/" target="_blank"
+            >Delphic Research</a
+          >
+          | Aug 2021 - Jan 2022
+        </p>
+        <br />
+        <p>
+          Researched and analyzed government and industry policy news and data
+          to present evidence-based policy insights for clients in various
+          fields like pharmaceuticals, health care, and public affairs,
+          including Novartis, Organon, and members of Canadian government. I
+          helped continue the development and design of Delphic's core briefing
+          structure.
+        </p>
+        <br />
+        <ul>
+          <li>
+            Becoming the sole analyst responsible for the daily political
+            briefings, I generated increased value by developing new briefing
+            formats for clients by creating private online article links using
+            Heroku to offer more tailored insights for clients based on
+            industry.
+          </li>
+          <li>
+            Worked on and led RFP proposals for potential client projects
+            focused on policy and data analysis in the public affairs industry,
+            using the in-house Argus news-gathering software and Excel formulas
+            and pivot tables for qualitative and quantitative analysis.
+          </li>
+          <li>
+            Created reports for internal and external executives and directors
+            regarding event news, such as COP26, and business insights for
+            investor presentations through research and fundamental data
+            analysis.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Hard Skills</h2>
+      <div class="grid">
+        <div class="grid-item">Microsoft Excel</div>
+        <div class="grid-item">SQL</div>
+        <div class="grid-item">PowerBI</div>
+        <div class="grid-item">CRM Software</div>
+        <div class="grid-item">Visualization and Reporting</div>
+        <div class="grid-item">Data Analysis</div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Soft Skills</h2>
+      <div class="grid">
+        <div class="grid-item">Presentation</div>
+        <div class="grid-item">Problem Solving</div>
+        <div class="grid-item">Adaptability</div>
+        <div class="grid-item">Skill Learning</div>
+        <div class="grid-item">Curiosity</div>
+        <div class="grid-item">Collaboration</div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="card">
+        <h3>Bachelor of Science</h3>
+        <p>Microbiology, Immunology, Genetics | Western University</p>
+        <br />
+        <p>
+          Activities and societies: University Students' Council, Science
+          Students' Council, First Year Orientation Team, Lambda Chi Alpha
+          Fraternity
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="card">
+        <h3>Portfolio</h3>
+        <!-- NEED TO MAKE THIS A LINK TO GITHUB PORTFOLIO-->
+        <p>Check out my full portfolio here!</p>
+        <!-- NEED TO MAKE THIS A LINK TO GITHUB PORTFOLIO-->
+        <!-- OR CAN MAKE THIS ALSO CARD BASED - 3 CARDS
+                  WITH THE FIRST 2 BEING THE BEST PROJECTS, and 3RD CARD LINKING TO 
+                  REST OF MY PROJECTS-->
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2 class="section-title">Certifications</h2>
+      <div class="card">
+        <h3>Certification Name</h3>
+        <p>Issuing Organization | 2021</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </section>
+
+    <section id="volunteer">
+      <h2 class="section-title">Volunteer Experience</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <p>
+            <a href="https://www.londonfoodbank.ca/about-1" target="_blank"
+              >London Food Bank</a
+            >
+          </p>
+          <p></p>
+        </div>
+        <div class="grid-item">
+          <p>
+            <a href="https://westernusc.ca/who-we-are/" target="_blank"
+              >University Students' Council</a
+            >
+          </p>
+          <p></p>
+        </div>
+        <div class="grid-item">
+          <p>
+            <a href="https://www.facebook.com/WesternIFC" target="_blank"
+              >IFC Council at UWO</a
+            >
+          </p>
+          <p></p>
+        </div>
+        <div class="grid-item">
+          <p>
+            <a href="https://www.westernssc.ca/" target="_blank"
+              >Science Students' Council</a
+            >
+          </p>
+          <p></p>
+        </div>
+        <div class="grid-item">
+          <p>
+            <a href="https://radiowestern.ca/about" target="_blank"
+              >Radio Western 94.9 CHRW</a
+            >
+          </p>
+          <p></p>
+        </div>
+        <div class="grid-item">
+          <p>
+            <a
+              href="https://www.lambdachi.org/about-lambda-chi-alpha/"
+              target="_blank"
+              >Lambda Chi Alpha Fraternity</a
+            >
+          </p>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEED TO ADD AN IMAGE OR SOMETHING FOR PARALLAX - UNKNOWN HOW WORKS -->
+    <script>
+      // Enhanced parallax effect
+      document.addEventListener("mousemove", (e) => {
+        const parallaxBg = document.querySelector(".parallax-bg");
+        const mouseX = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
+        const mouseY = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
+
+        parallaxBg.style.transform = `translate(${mouseX * 50}px, ${
+          mouseY * 50
+        }px)`; // Increased from 20px to 50px
+      });
+
+      // Fix scroll offset for navigation
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const section = document.querySelector(this.getAttribute("href"));
+          const navHeight = document.querySelector("nav").offsetHeight;
+          const offset = section.offsetTop - navHeight;
+
+          window.scrollTo({
+            top: offset,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
