@@ -162,17 +162,19 @@ section {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .grid-item {
   background: var(--primary);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 15px;
   text-align: center;
   transition: all 0.1s ease;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: white;
+  height: 60px;
 }
 
 .grid-item a {
